@@ -1,0 +1,42 @@
+how to import beautifulsoup
+
+# from bs4 import BeautifulSoup
+# import requests
+
+to get information from a website
+# html = requests.get('url')
+
+if 200s then it mean request is succesful
+
+to convert the html into text
+# html_text = html.text
+
+this gives the whole html in text form
+
+after changing to text we use beautifulsoup
+# soup = BeautifulSoup(html_text , 'parser')
+
+a parser is the thing that takes raw HTML/XML code and converts it into a structured tree that Beautiful Soup can understand and navigate.
+
+html.parser → Built-in
+lxml → Fast
+html5lib → Handles messy HTML well
+
+inspect the webpage and understand the class of the required element of the class we need to scrap
+
+to find the first tag
+# h1 = soup.find("h1",class)
+
+to find all the tags we use find_all(tag,class_)
+
+class is optional as if we want to find all elements of a specific tag we use it
+
+Find a specific tag and return the text inside it
+# tag = soup.find("h2")
+#print(tag.get_text())
+
+we can use replace to replace the blank spaces into the ""
+
+### working on all these require analysing the webpage
+
+In Beautiful Soup web scraping, you commonly use Python if conditions to filter tags based on their text, attributes, or other properties.
